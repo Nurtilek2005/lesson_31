@@ -33,9 +33,9 @@ let users = [
 
 for(let item of users) {
   let user = $('<li>');
-  // let login = $("<a href=" + "item.login + >"item.login  + "</a>");
+  let login = $(`<a href=${item.login}>${item.login}</a>`);
   console.log(login);
-  user.text(  `${item.firstName} ${item.lastName}`  );
+  user.text(  `${item.firstName} ${item.lastName} `);
   user.append(login);
   $('.twitter__list').append(user);
 }
